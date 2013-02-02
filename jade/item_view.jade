@@ -1,0 +1,6 @@
+div(data-role="header")
+  h1 <%= name %>
+  a(id="btnBack", href="#items/", data-icon="back") Back
+  a(id="btnNew", href!="#edit/<%= _id %>", data-icon="edit") Edit
+div#codes_content(data-role="content")
+  |<%= name %>

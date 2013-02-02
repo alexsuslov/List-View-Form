@@ -1,0 +1,25 @@
+mixin button(name,icon,url,pos)
+  a(id=pos,href=url,data-icon=icon,data-iconpos=pos)= name
+
+mixin rbutton(name,icon,url)
+  mixin button(name,icon,url,'right')
+
+mixin lbutton(name,icon,url)
+  mixin button(name,icon,url,'left')
+
+mixin addfield(id,name)
+  li
+      a.add(id=id,href='/dlg')= name
+
+mixin add_field(name,type, value)
+  input(type=type, name=name, value=value)
+
+mixin form_field(label,name, type)
+  <% if (typeof( #{name}) != "undefined") { %> 
+  label(for=name)= label
+  - value = '<%= ' + name + ' %>'
+  input(type=type, name=name, value!=value)
+  <% } else { %>
+  label(for=name)= label
+  input(type=type, name=name)
+  <% } %>

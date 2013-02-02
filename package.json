@@ -1,0 +1,23 @@
+{
+  "name": "List-View-Form",
+  "description": "List-View-Form",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": ""
+  },
+  "dependencies": {
+
+  }
+  ,"jam":{
+    "packageDir":"lib",
+    "baseUrl":"",
+    "dependencies": {
+      "underscore":"*"
+      , "backbone":"*"
+      , "jquery":"1.8.3"
+      , "domReady":"*"
+    }
+  }
+}
+
